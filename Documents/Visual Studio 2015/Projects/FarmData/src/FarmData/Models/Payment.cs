@@ -20,6 +20,7 @@ namespace FarmData.Models
         public PaymentMethod PaymentMethod { get; set; }
         public ICollection<Farmer_Payment> FarmerPayments { get; set; }
         public ICollection<ProcessorPayment> ProcessorPayments { get; set; }
+        public ICollection<UserPayment> UserPayments { get; set; }
     }
 
     public class PaymentMethod

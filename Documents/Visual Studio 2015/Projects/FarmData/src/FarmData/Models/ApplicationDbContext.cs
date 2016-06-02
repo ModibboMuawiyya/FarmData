@@ -22,6 +22,7 @@ namespace FarmData.Models
             builder.Entity<ProcessorContact>().HasKey(c => new { c.CompanyId, c.ContactId });
             builder.Entity<ProcessorBusiness>().HasKey(b => new { b.CompanyId, b.BusinessId });
             builder.Entity<ProductProcessor>().HasKey(e => new { e.CompanyId, e.ProductId });
+            builder.Entity<UserPayment>().HasKey(u => new { u.NewId, u.PaymentId });
         }
         public DbSet<Farmer> Farmer { get; set; }
         public DbSet<Child> Child { get; set; }
@@ -39,5 +40,10 @@ namespace FarmData.Models
         public DbSet<ProductProcessor> ProductProcessor { get; set; }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<BusinessType> BusinessType { get; set; }
+        public DbSet<NewFarmer> NewFarmer { get; set; }
+        public DbSet<Training> Training { get; set; }
+        public DbSet<Qualification> Qualification { get; set; }
+        public DbSet<NewUserBio> NewUserBio { get; set; }
+        public DbSet<UserPayment> UserPayment { get; set; }
     }
 }

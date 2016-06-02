@@ -1,0 +1,36 @@
+@model FarmData.Models.NewUserBio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NewUserBio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPicture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserPicture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPrint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserPrint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserSignature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserSignature)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.NewId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>

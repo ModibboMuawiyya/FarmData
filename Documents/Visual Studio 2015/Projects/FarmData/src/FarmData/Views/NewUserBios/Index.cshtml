@@ -1,0 +1,44 @@
+@model IEnumerable<FarmData.Models.NewUserBio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPrint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserSignature)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPrint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserSignature)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.NewId">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.NewId">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.NewId">Delete</a>
+        </td>
+    </tr>
+}
+</table>
