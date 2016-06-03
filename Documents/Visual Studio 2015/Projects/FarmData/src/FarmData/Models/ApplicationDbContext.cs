@@ -23,6 +23,10 @@ namespace FarmData.Models
             builder.Entity<ProcessorBusiness>().HasKey(b => new { b.CompanyId, b.BusinessId });
             builder.Entity<ProductProcessor>().HasKey(e => new { e.CompanyId, e.ProductId });
             builder.Entity<UserPayment>().HasKey(u => new { u.NewId, u.PaymentId });
+            builder.Entity<ExporterPayment>().HasKey(g => new { g.ExporterId, g.PaymentId });
+            builder.Entity<ExporterCartegories>().HasKey(ec => new { ec.ExporterId, ec.CartegoriesId });
+            builder.Entity<AgentExporter>().HasKey(ae => new { ae.ExporterId, ae.AgentId });
+
         }
         public DbSet<Farmer> Farmer { get; set; }
         public DbSet<Child> Child { get; set; }
@@ -45,5 +49,11 @@ namespace FarmData.Models
         public DbSet<Qualification> Qualification { get; set; }
         public DbSet<NewUserBio> NewUserBio { get; set; }
         public DbSet<UserPayment> UserPayment { get; set; }
+        public DbSet<AgentExporter> AgentExporter { get; set; }
+        public DbSet<Cartegories> Cartegories { get; set; }
+        public DbSet<Exporter> Exporter { get; set; }
+        public DbSet<ExporterCartegories> ExporterCartegories { get; set; }
+        public DbSet<ExporterPayment> ExporterPayment { get; set; }
+        public DbSet<Agent> Agent { get; set; }
     }
 }

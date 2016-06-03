@@ -1,0 +1,32 @@
+@model IEnumerable<FarmData.Models.Cartegories>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CatType)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CatType)
+        </td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.CartegoriesId">Edit</a> |
+            <a asp-action="Details" asp-route-id="@item.CartegoriesId">Details</a> |
+            <a asp-action="Delete" asp-route-id="@item.CartegoriesId">Delete</a>
+        </td>
+    </tr>
+}
+</table>

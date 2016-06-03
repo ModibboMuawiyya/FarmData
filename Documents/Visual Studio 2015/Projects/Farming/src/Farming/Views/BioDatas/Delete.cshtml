@@ -1,0 +1,46 @@
+@model Farming.Models.BioData
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BioData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EntryDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerPic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FarmerPic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FingerPrint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FingerPrint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Signature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Signature)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

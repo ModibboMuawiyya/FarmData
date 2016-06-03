@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A48AA9E4-6518-46B2-AA26-D5BA30D1A99B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0DCF60F-FEEF-4ABC-8E36-FDE5F509686C}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Farming", "src\Farming\Farming.xproj", "{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B5A930D-DC61-4DD7-A53F-C8D5E2CEBC2F} = {A48AA9E4-6518-46B2-AA26-D5BA30D1A99B}
+	EndGlobalSection
+EndGlobal

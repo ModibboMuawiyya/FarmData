@@ -1,0 +1,59 @@
+@model Farming.Models.BioData
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>BioData</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="FarmerId" />
+        <div class="form-group">
+            <label asp-for="EntryDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EntryDate" class="form-control" />
+                <span asp-validation-for="EntryDate" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FarmerPic" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FarmerPic" class="form-control" />
+                <span asp-validation-for="FarmerPic" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FingerPrint" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="FingerPrint" class="form-control" />
+                <span asp-validation-for="FingerPrint" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Signature" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Signature" class="form-control" />
+                <span asp-validation-for="Signature" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
